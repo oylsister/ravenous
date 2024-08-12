@@ -22,4 +22,23 @@ function App() {
   );
 }
 
-export default App;
+function Business() {
+  return (
+    <div className='restaurant-container'>
+      <img className="restaurant-pic" src="" />
+      <div className="info-container">
+        <h3 className='restaurant-name'>Ratchada Thai Food</h3>
+        <div className="info-row">
+          <p className='info-location'></p>
+          <div className="info-review">
+            <p className="food-type"></p>
+            <p className='food-rating'></p>
+            <p className='food-reviewcount'></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default { App, Business };
