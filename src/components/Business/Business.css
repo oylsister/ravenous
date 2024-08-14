@@ -1,0 +1,63 @@
+.restaurant-container {
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+}
+
+.restaurant-pic-container {
+    display: flex;
+    max-width: 300px;
+    max-height: 300px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.restaurant-pic {
+    width: 300px;
+}
+
+.restaurant-name {
+    margin-top: 9px;
+    margin-bottom: 9px;
+    font-size: 20px;
+}
+
+.info-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.location-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.info-location {
+    font-size: 16px;
+    margin: 1px;
+    margin-left: 0px;
+}
+
+.info-review {
+    display: flex;
+    flex-direction: column;
+}
+
+.food-type, .food-rating, .food-reviewcount {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: right;
+}
+.food-type, .food-rating {
+    font-weight: bold;
+    color: rgb(174, 185, 15);
+}
+
+.food-type {
+    font-size: 21px;
+}
+

@@ -1,14 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import { App, Business } from './App';
+import App from './App';
+import { Business, pizza } from './components/Business/Business';
+import BusinessList from './components/BusinessList/BusinessList';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    //<App />
-    <Business />
+    <BusinessList />
   </React.StrictMode>
 );
 
