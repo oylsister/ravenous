@@ -1,0 +1,73 @@
+.searchbar-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url(./background_search_desktop.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 400px;
+}
+
+.searchbar-option ul {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 35px;
+    color: white;
+}
+
+.searchbar-option li {
+    cursor: pointer;
+    width: 69px; 
+    text-align: center;
+    list-style: none;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: white;
+    padding: 0 2.58rem 0.33rem 2.58rem;
+    font-weight: bold;
+    transition: color 0.25s, border-bottom-color 0.25s;
+}
+
+.searchbar-option li:hover {
+    color: rgb(199, 199, 199);
+    border-bottom-color: rgb(199, 199, 199);
+}
+
+.searchbar-option li:active, .searchbar-option li.active:hover {
+    border-bottom: 1px solid #f0c36c;
+    color: #f0c36c;
+}
+
+.searchbar-input {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2.88rem;    
+}
+
+.searchbar-input input {
+    width: 21rem;
+    padding: 0.66rem 16px;
+    margin-right: 2.22rem;
+    border: 1px solid white;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.searchbar-submit {
+    text-align: center;
+}
+
+.searchbar-submit a {
+    border-radius: 4px;
+    padding: 0.72rem 1.7rem;
+    background-color: #cca353;
+    color: #ffffff;
+    font-weight: 600;
+    transition: background-color 0.5s;
+    }
+
+.searchbar-submit a:hover {
+    cursor: pointer;
+    background-color: #a7874b;
+}
