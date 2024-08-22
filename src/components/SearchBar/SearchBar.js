@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './SearchBar.css';
 
 const sortByOptions = {
@@ -8,11 +9,40 @@ const sortByOptions = {
   
 
 function SearchBar() {
+    const [term, setTerm] = useState("");
+    const [location, setLocation] = useState("");
+    const [sortBy, setSortBy] = useState("best_match");
+
+    function getSortByClass(sortByOption)
+    {
+        if(sortBy === sortByOption)
+            return "active";
+    
+        return "";
+    }
+
+    const handleSortByChange = (option) => {
+        setSortBy(option);
+    }
+
+    function handleSearch(event) {
+        event.preventDefault();
+    }
+
+    function handleTermChange(event) {
+        console.log(`Term= ${event.target.value}`);
+        setTerm(event.target.value);
+    }
+
+    function handleLocationChange(event) {
+        setLocation(event.target.value);
+    }
+
     function renderSortByOption()
     {
         return Object.keys(sortByOptions).map((sortByOption) => {
             let value = sortByOptions[sortByOption];
-            return <li key={value}>{sortByOption}</li>;
+            return <li className={getSortByClass(value)} key={value} onClick={() => handleSortByChange(value)}>{sortByOption}</li>;
         });
     };
 
@@ -21,13 +51,15 @@ function SearchBar() {
             <div className='searchbar-option'>
                 <ul>{renderSortByOption()}</ul>
             </div>
-            <div className='searchbar-input'>
-                <input placeholder='Search Businesses' />
-                <input placeholder='Where' />
-            </div>
-            <div className='searchbar-submit'>
-                <a>Let's Go</a>
-            </div>
+            <form onSubmit={handleSearch}>
+                <div className='searchbar-input'>
+                    <input placeholder='Search Businesses' onChange={handleTermChange} />
+                    <input placeholder='Where' onChange={handleLocationChange} />
+                </div>
+                <div className='searchbar-submit'>
+                    <button type="submit">Let's Go</button>
+                </div>
+            </form>
         </div>
     );
 };

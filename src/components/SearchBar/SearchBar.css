@@ -33,7 +33,7 @@
     border-bottom-color: rgb(199, 199, 199);
 }
 
-.searchbar-option li:active, .searchbar-option li.active:hover {
+.searchbar-option li.active, .searchbar-option li.active:hover {
     border-bottom: 1px solid #f0c36c;
     color: #f0c36c;
 }
@@ -58,16 +58,17 @@
     text-align: center;
 }
 
-.searchbar-submit a {
+.searchbar-submit button {
     border-radius: 4px;
     padding: 0.72rem 1.7rem;
     background-color: #cca353;
     color: #ffffff;
     font-weight: 600;
     transition: background-color 0.5s;
-    }
+    border: 0;
+}
 
-.searchbar-submit a:hover {
+.searchbar-submit button:hover {
     cursor: pointer;
     background-color: #a7874b;
 }
