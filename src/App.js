@@ -1,5 +1,6 @@
 import BusinessList from './components/BusinessList/BusinessList';
 import SearchBar from './components/SearchBar/SearchBar';
+import Yelp_getBusiness from './utils/yelp';
 import './App.css';
 
 const business = {
@@ -14,12 +15,13 @@ const business = {
     reviewCount: 90
 };
 
-const businesses = [business, business, business, business, business, business];
+let businesses = [];
 
 function App() {
 
   function searchYelp(term, location, sortBy) {
     console.log(`Search Yelp with ${term}, ${location}, ${sortBy}`);
+    businesses = Yelp_getBusiness(term, location, sortBy);
   }
 
   return (
