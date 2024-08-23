@@ -8,7 +8,7 @@ const sortByOptions = {
   };
   
 
-function SearchBar() {
+function SearchBar({ searchYelp }) {
     const [term, setTerm] = useState("");
     const [location, setLocation] = useState("");
     const [sortBy, setSortBy] = useState("best_match");
@@ -27,10 +27,10 @@ function SearchBar() {
 
     function handleSearch(event) {
         event.preventDefault();
+        searchYelp(term, location, sortBy);
     }
 
     function handleTermChange(event) {
-        console.log(`Term= ${event.target.value}`);
         setTerm(event.target.value);
     }
 
